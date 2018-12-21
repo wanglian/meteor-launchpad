@@ -11,5 +11,12 @@ docker build \
   --build-arg METEOR_VERSION=1.6.0.1 \
   -f meteor.dockerfile \
   -t wanglian/meteor-launchpad .
-// then use wanglian/meteor-launchpad to build meteor app docker image
+docker build \
+  --build-arg INSTALL_PHANTOMJS=true \
+  --build-arg INSTALL_GRAPHICSMAGICK=true \
+  --build-arg NODE_VERSION=8.11.4 \
+  --build-arg METEOR_VERSION=1.8.0.1 \
+  -f meteor.dockerfile \
+  -t wanglian/meteor-launchpad .
+// then use wanglian/weaworking-launchpad to build meteor app docker image
 ```
